@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj" />
+    <ProjectReference Include="..\..\ramfree.database.QueryManager\ramfree.database.QueryManager.csproj" />
     <ProjectReference Include="..\Client\blazor.wasm.Client.csproj" />
-    <ProjectReference Include="..\Shared\blazor.wasm.Shared.csproj" />
   </ItemGroup>
 
 

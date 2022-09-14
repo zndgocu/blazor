@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using ramfree.database.QueryManager.Interface;
+using ramfree.database.QueryManager.Manager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+
+//di
+builder.Services.AddTransient<IQueryManager, QueryManager>();
 
 var app = builder.Build();
 

@@ -7,12 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor.wasm.Server", "blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor.wasm.Client", "blazor.wasm\Client\blazor.wasm.Client.csproj", "{F1307171-F3CC-4F2B-84D3-9A2BE9FE32C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor.wasm.Shared", "blazor.wasm\Shared\blazor.wasm.Shared.csproj", "{CF727C8C-78EC-409C-8E3B-AEB0FA2AE073}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{747B3874-0C26-412F-92C0-4E166EFEFB02}"
 	ProjectSection(SolutionItems) = preProject
 		이력.txt = 이력.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor.wasm.EntityContext", "blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj", "{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ramfree.database.QueryManager", "ramfree.database.QueryManager\ramfree.database.QueryManager.csproj", "{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ramfree.EntityHelper", "ramfree.EntityHelper\ramfree.EntityHelper.csproj", "{109C8A00-8538-4B12-B81C-B564C1801359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +32,18 @@ Global
 		{F1307171-F3CC-4F2B-84D3-9A2BE9FE32C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1307171-F3CC-4F2B-84D3-9A2BE9FE32C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1307171-F3CC-4F2B-84D3-9A2BE9FE32C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF727C8C-78EC-409C-8E3B-AEB0FA2AE073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF727C8C-78EC-409C-8E3B-AEB0FA2AE073}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF727C8C-78EC-409C-8E3B-AEB0FA2AE073}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF727C8C-78EC-409C-8E3B-AEB0FA2AE073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{109C8A00-8538-4B12-B81C-B564C1801359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109C8A00-8538-4B12-B81C-B564C1801359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109C8A00-8538-4B12-B81C-B564C1801359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109C8A00-8538-4B12-B81C-B564C1801359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
