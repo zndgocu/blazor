@@ -14,6 +14,11 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\icons\material\" />
+    <Folder Include="wwwroot\library\jquery\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj" />
   </ItemGroup>
 
 </Project>

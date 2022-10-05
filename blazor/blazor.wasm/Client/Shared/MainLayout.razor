@@ -4,6 +4,11 @@
 <MudDialogProvider />
 <MudSnackbarProvider />
 
+
+<div id="loading">
+    <div class="spinner" />
+</div>
+
 <MudLayout>
     <AppBar @ref="@_appBar" ToggleChanged="@((e) => OnToggleChanged(e))"></AppBar>
     <MudDrawer @bind-Open="@_toggle" ClipMode="DrawerClipMode.Always" Elevation="2">

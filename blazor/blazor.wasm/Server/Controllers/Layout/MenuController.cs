@@ -5,7 +5,7 @@ using ramfree.database.QueryManager.Interface;
 namespace blazor.wasm.Server.Controllers.Layout
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("menu")]
     public class MenuController : Controller
     {
         private readonly ILogger<MenuController> _logger;
