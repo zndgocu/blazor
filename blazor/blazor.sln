@@ -12,11 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루�
 		이력.txt = 이력.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor.wasm.EntityContext", "blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj", "{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor.wasm.EntityContext", "blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj", "{D6D7DD4C-827B-4314-8AA4-1555836E8F9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ramfree.database.QueryManager", "ramfree.database.QueryManager\ramfree.database.QueryManager.csproj", "{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ramfree.database.QueryManager", "ramfree.database.QueryManager\ramfree.database.QueryManager.csproj", "{DDB9F92A-F7E1-4FA0-8DA4-EE641C58580A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ramfree.EntityHelper", "ramfree.EntityHelper\ramfree.EntityHelper.csproj", "{109C8A00-8538-4B12-B81C-B564C1801359}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ramfree.Extensions", "ramfree.Extensions\ramfree.Extensions.csproj", "{3E11DB6A-9405-45DA-8C73-6DC75F52AB98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ramfree.customDataType", "ramfree.customDataType\ramfree.customDataType.csproj", "{71FA063F-F3E6-46E9-9E72-DD1B6126666A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +48,14 @@ Global
 		{109C8A00-8538-4B12-B81C-B564C1801359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{109C8A00-8538-4B12-B81C-B564C1801359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{109C8A00-8538-4B12-B81C-B564C1801359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E11DB6A-9405-45DA-8C73-6DC75F52AB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E11DB6A-9405-45DA-8C73-6DC75F52AB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E11DB6A-9405-45DA-8C73-6DC75F52AB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E11DB6A-9405-45DA-8C73-6DC75F52AB98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FA063F-F3E6-46E9-9E72-DD1B6126666A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FA063F-F3E6-46E9-9E72-DD1B6126666A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FA063F-F3E6-46E9-9E72-DD1B6126666A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FA063F-F3E6-46E9-9E72-DD1B6126666A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

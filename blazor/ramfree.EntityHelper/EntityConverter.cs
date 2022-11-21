@@ -50,6 +50,7 @@ namespace ramfree.EntityHelper
             }
             catch (Exception exception)
             {
+                Console.WriteLine(exception.Message);
                 return null;
             }
         }

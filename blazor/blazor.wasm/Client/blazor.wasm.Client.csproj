@@ -10,15 +10,17 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.6" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="6.0.15" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\icons\material\" />
     <Folder Include="wwwroot\library\jquery\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\blazor.wasm.EntityContext\blazor.wasm.EntityContext.csproj" />
+    <ProjectReference Include="..\..\ramfree.customDataType\ramfree.customDataType.csproj" />
+    <ProjectReference Include="..\..\ramfree.Extensions\ramfree.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

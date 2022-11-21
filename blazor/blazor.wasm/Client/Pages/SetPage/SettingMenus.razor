@@ -1,0 +1,56 @@
+﻿@page "/set-page/setting-menus"
+
+<div class="flex-wireframe flex-column">
+    <div class="flex-item flex-grow-false flex-basis-true">
+        <div class="flex-item">
+            메뉴 설정
+        </div>
+    </div>
+    <div class="flex-item">
+        <div class="flex-wireframe flex-row">
+            <div class="flex-item shadow-box">
+                <div class="flex-wireframe flex-item-align-center flex-item-justify-content-center">
+                    @if (_selectedMenu is not null)
+                    {
+                        <EditForm Model="@_selectedMenu" class="input-form-box text-align-center">
+                            <h2 class="input-form-box-heading">메뉴 정보</h2>
+                            <MudTextField Label="Id" HelperText="Max. 36 characters" @bind-Value="_selectedMenu.Id" For="@(() => _selectedMenu.Id)" class="input-form-box-control" />
+                            <MudTextField Label="Menu_Typee" @bind-Value="_selectedMenu.Menu_Type" For="@(() => _selectedMenu.Menu_Type)" class="input-form-box-control" />
+                            <MudTextField Label="Tree_Menu_Id" @bind-Value="_selectedMenu.Tree_Menu_Id" For="@(() => _selectedMenu.Tree_Menu_Id)" class="input-form-box-control" />
+                            <MudTextField Label="Name" @bind-Value="_selectedMenu.Name" For="@(() => _selectedMenu.Name)" class="input-form-box-control" />
+                            <MudTextField Label="Icon" @bind-Value="_selectedMenu.Icon" For="@(() => _selectedMenu.Icon)" class="input-form-box-control" />
+                            <InputCheckbox @bind-Value="_selectedMenu.Expanded" class="input-form-box-control" />
+                            <MudTextField Label="Link" @bind-Value="_selectedMenu.Link" For="@(() => _selectedMenu.Link)" class="input-form-box-control" />
+                        </EditForm>
+                    }
+                </div>
+            </div>
+            <div class="flex-item shadow-box">
+                <div class="flex-wireframe flex-item-align-center flex-item-justify-content-center">
+                    <div class="paper text-align-center non-border">
+                        <div class="paper-box-header">
+                            현재 메뉴
+                        </div>
+                        <div class="paper-box">
+                            <CascadingValue Value="@_menus">
+                                <CascadingValue Value="@_svgs">
+                                    <NavMenu Editable="true" OnSelectedMenu="OnSelectedMenu" @ref="@_navMenu" />
+                                </CascadingValue>
+                            </CascadingValue>
+                        </div>
+                        <div class="paper-footer">
+                            <button>sticky btn2</button>
+                            <button>sticky btn2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-footer">
+        footer
+    </div>
+</div>
+
+@code {
+}

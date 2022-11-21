@@ -1,9 +1,46 @@
-﻿<MudNavMenu>
-    <MudNavLink Href="/" Match="NavLinkMatch.All">Dashboard</MudNavLink>
-    <MudNavLink Href="/servers" Match="NavLinkMatch.Prefix">Servers</MudNavLink>
-    <MudNavGroup Title="Settings" Expanded="true">
-        <MudNavLink Href="/users"  Match="NavLinkMatch.Prefix">Users</MudNavLink>
-        <MudNavLink Href="/security"  Match="NavLinkMatch.Prefix">Security</MudNavLink>
-    </MudNavGroup>
-    <MudNavLink Href="/about"  Match="NavLinkMatch.Prefix">About</MudNavLink>
-</MudNavMenu>
+﻿@if(@IsEditMode()){
+    <MudNavMenu>
+        @if (Menus is not null)
+        {
+            @foreach (var menu in GetNonTreeMenu())
+            {
+                @if (menu.Expanded == true)
+                {
+                    <MudNavGroup Title="@menu.Name" Icon="@GetIcon(menu)" Expanded="true" ExpandedChanged="(e) => OnClickMenu(menu)">
+                        @foreach (var menu in GetTreeMenu(menu.Id))
+                        {
+                            <MudNavLink OnClick="(e) => OnClickMenu(menu)" Match="NavLinkMatch.All" Icon="@GetIcon(menu)">@menu.Name</MudNavLink>
+                        }
+                    </MudNavGroup>
+                }
+                else
+                {
+                    <MudNavLink OnClick="(e) => OnClickMenu(menu)" Match="NavLinkMatch.All" Icon="@GetIcon(menu)">@menu.Name</MudNavLink>
+                }
+            }
+        }
+    </MudNavMenu>
+}
+else{
+    <MudNavMenu>
+        @if (Menus is not null)
+        {
+            @foreach (var menu in GetNonTreeMenu())
+            {
+                @if (menu.Expanded == true)
+                {
+                    <MudNavGroup Title="@menu.Name" Icon="@GetIcon(menu)" Expanded="false">
+                        @foreach (var menu in GetTreeMenu(menu.Id))
+                        {
+                            <MudNavLink Href="@menu.Link" Match="NavLinkMatch.All" Icon="@GetIcon(menu)">@menu.Name</MudNavLink>
+                        }
+                    </MudNavGroup>
+                }
+                else
+                {
+                    <MudNavLink Href="@menu.Link" Match="NavLinkMatch.All" Icon="@GetIcon(menu)">@menu.Name</MudNavLink>
+                }
+            }
+        }
+    </MudNavMenu>
+}

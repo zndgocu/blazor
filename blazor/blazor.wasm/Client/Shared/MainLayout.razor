@@ -12,10 +12,21 @@
 <MudLayout>
     <AppBar @ref="@_appBar" ToggleChanged="@((e) => OnToggleChanged(e))"></AppBar>
     <MudDrawer @bind-Open="@_toggle" ClipMode="DrawerClipMode.Always" Elevation="2">
-        <NavMenu/>
+        <CascadingValue Value="@Menus">
+            <CascadingValue Value="@Svgs">
+                <NavMenu @ref="@_navMenu" />
+            </CascadingValue>
+        </CascadingValue>
     </MudDrawer>
-    <MudMainContent>
-        @Body
+    <MudMainContent Style="height:100vh;">
+        
+        <CascadingValue Value="@MatIconProviderService">
+            <CascadingValue Value="@JsProviderService">
+                <CascadingValue Value="@Snackbar">
+                    @Body
+                </CascadingValue>
+            </CascadingValue>
+        </CascadingValue>
     </MudMainContent>
 </MudLayout>
 
